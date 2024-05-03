@@ -58,7 +58,9 @@ function roughley(inbox, outbox){
     let inputStr = inbox.value;
     let outputStr = "";
     for (let char of inputStr){
-        outputStr += roughToEnglish[char]
+        if (roughToEnglish.hasOwnProperty(char)){
+            outputStr += roughToEnglish[char]
+        }
     }
     outbox.value = outputStr;
 }
