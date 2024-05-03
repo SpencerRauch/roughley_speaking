@@ -51,7 +51,7 @@ const roughToEnglish = {
     x:'v',
     y:'g',
     z:'s',
-}
+};
 
 
 function roughley(inbox, outbox){
@@ -59,7 +59,9 @@ function roughley(inbox, outbox){
     let outputStr = "";
     for (let char of inputStr){
         if (roughToEnglish.hasOwnProperty(char)){
-            outputStr += roughToEnglish[char]
+            outputStr += roughToEnglish[char];
+        } else {
+            outputStr += char;
         }
     }
     outbox.value = outputStr;
